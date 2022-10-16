@@ -1,14 +1,15 @@
-CREATE DATABASE `drawingstationbeta`;
+DROP DATABASE IF EXISTS drawingstationbeta;
 
-USE `drawingstationbeta`;
+CREATE DATABASE drawingstationbeta;
 
-CREATE TABLE `drawingstationbeta`.`users` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NULL,
-  `email` VARCHAR(45) NULL,
-  `password` VARCHAR(45) NULL,
-  `phone` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+USE drawingstationbeta;
+
+CREATE TABLE users (
+  id INT NOT NULL auto_increment,
+  name VARCHAR(30) NOT NULL,
+  email VARCHAR(30) NOT NULL,
+  password VARCHAR(30) NOT NULL,
+  PRIMARY KEY(id)
+) ENGINE=INNODB;
 
 SET SQL_SAFE_UPDATES = 0;
